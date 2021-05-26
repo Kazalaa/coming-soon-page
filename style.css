@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns:11vw 58vw 42vw;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    z-index: 0;
+}
+/*.model{
+    width: auto;
+    grid-column: 3;
+}*/
+.image{
+    grid-column: 3;
+    background-image: url(./images/hero-desktop.jpg);
+}
+.logo-text-form{
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh 21.25vh 23.75vh 20vh 27vh;
+}
+.logo{
+    grid-row: 2;  
+}
+span{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300 !important;
+}
+h1{
+    grid-row: 3;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 23px;
+}
+p.welcome{
+    grid-row: 4;
+    font-size: 16px;
+    font-weight: bold;
+    color: hsl(0, 36%, 70%);
+    line-height: 30px;
+    max-width: 31vw;
+}
+.e-mail{
+    grid-row: 5;
+    color:hsl(0, 36%, 70%);
+
+}
+input{
+    position: fixed;
+    border-radius: 50px;
+    border-color: hsl(0, 36%, 70%);
+    width: 31vw;
+    height: 6.8vh;
+    margin-left: 0px;
+    z-index: 0;
+}
+.btn-validation{
+    position: relative;
+    left: 0vw;
+    z-index: 1;
+}
+.error{
+    position: relative; 
+}
+/* Small devices (landscape phones, 576px and up)
+@media (max-width: 375px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .image{
+      grid-row: 3;
+    background-image: url(./images/hero-mobile.jpg);
+    width: 100%;
+    z-index: 1;
+  }
+  .logo-text-form{
+    grid-template-rows: auto;
+    text-align: center;
+}
+h1{
+    grid-row: 4;
+}
+}
+
+/* Medium devices (tablets, 768px and up) 
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large devices (desktops, 992px and up) 
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) 
+@media (min-width: 1200px) {
+    .grid {
+        grid-template-columns:11vw 58vw 42vw;
+}*/
