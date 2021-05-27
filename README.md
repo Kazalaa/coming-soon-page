@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution live](https://www.frontendmentor.io/solutions/responsive-columncardcomponent-qWraKCX0p)
-- Preview site URL:[Preview site](https://kazalaa.github.io/three-column-card/)
+- Solution URL: [Solution live](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-g76tseUif)
+- Preview site URL:[Preview site](https://kazalaa.github.io/coming-soon-page/)
 
 
 ### Built with
