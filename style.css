@@ -16,6 +16,7 @@
     grid-column: 3;
     grid-row: 1/4;
     background-image: url(./images/hero-desktop.jpg);
+    background-repeat: no-repeat;
 }
 .logo-text-form{
     grid-column: 2;
@@ -47,49 +48,77 @@ p.welcome{
     line-height: 30px;
     max-width: 31vw;
 }
-.e-mail{
+form{
+    width: 31vw;
     position: relative;
-    grid-row: 3;
+}
+
+.input-email{
+    /*position: absolute;*/
+    width: 100%;
+    height: 6.875vh;
+    font-size: 0.9rem;
+    padding: 1em;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid hsl(0, 36%, 70%);
+    
+}
+.input-email:focus{
+    border: 2px solid hsl(0, 78%, 65%);
+    outline: none;
+    
+}
+
+::placeholder{
     color:hsl(0, 36%, 70%);
+    
+}
+.error-icon{
+    position: absolute;
+    top: 2vh;
+    right: 12vw;
+    visibility: hidden;
 
 }
-input{
-    position: absolute;
-    border-radius: 50px;
-    border-color: hsl(0, 36%, 70%);
-    width: 31vw;
-    height: 6.8vh;
-    margin-left: 0px;
-    z-index: 0;
-    padding-left: 20px;
+.error-message{
+    color:hsl(0, 79%, 68%);
+    font-size: 16px;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    visibility: hidden;
 }
-input::placeholder{
-    color: hsl(0, 36%, 70%);
+form.error .error-message{
+    visibility: visible;
+}
+form.error .error-icon{
+    visibility: visible;
 }
 .btn-validation{
-    position: absolute;
-    background-image: linear-gradient(135deg, hsl(0, 80%, 80%), hsl(0, 74%, 74%));
-    border-radius: 50px;
-    left: 23vw;
-    z-index: 1;
+    
+    height: 6.875vh;
+    width: 10vw;
+    position: absolute; 
+    right: 0;
     border: none;
-    width: 8vw;
-    height: 6.8vh;
+    border-radius: 50px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0px 10px 10px 0px hsl(0deg 70% 90% / 70%);
 }
-.error{
-    position: relative;
-    left: 20vw;
-    top: 2vh;
-    visibility: hidden;
+.btn-validation:hover{
+    cursor: pointer;
+    background: hsl(0, 80%, 86%);
 }
-.error-text{
-    margin-top: 50px;
-    visibility: hidden;
+.btn-validation:focus-visible{
+    outline: none;
+    border: 2px solid hsl(0, 78%, 65%);
 }
+
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 200px) and (max-width: 768px) {
     .grid {
         grid-template-columns:100vw;
+        grid-template-rows: 10.625vh 31.25vh 58.125vh;
         text-align: center;
       }
   .image{
@@ -102,16 +131,41 @@ input::placeholder{
   }
   .logo-text-form{ 
     grid-column: 1;
-    margin-left: 5vw;
     grid-template-rows: 21.25vh 23.75vh 20vh 27vh;
 }
 .logo{
     grid-column: 1;
     grid-row: 1;
     margin-left: 10vw;
+    margin-top: 5vw;
+}
+h1{
+    margin-top: 10vw;
+    font-size: 30px;
+    letter-spacing: 15px;
+    margin:auto;
 }
 p.welcome{
-    max-width: 80vw;
+    max-width:none;
+    padding: 1vw;
+    margin:auto;
+}
+form{
+    position: relative;
+    width: 95%;
+    margin: auto;
+    margin-top: 0;
+}
+.btn-validation{
+    height: 6.875vh;
+    width: 30vw;
+}
+.error-icon{
+    right: 35vw;
+}
+.error-message{
+    margin-left:2vw;
+    text-align: left;
 }
 }
 /* Medium devices (tablets, 768px and up) */
@@ -130,6 +184,14 @@ p.welcome{
     .logo-text-form{
         grid-column: 1;
         margin-left: 5vw;
+    }
+    form{
+        margin-top: 50px;
+        width: auto;
+        margin-right: 20px;
+}
+    p.welcome{
+        max-width: 40vw;
     }
 }
 
